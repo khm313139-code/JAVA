@@ -40,6 +40,8 @@ class method5_box{
 	else {
 		msg="오답입니다.";
 		}
+	
+	
 	return msg;
 	}
 
