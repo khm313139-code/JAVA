@@ -17,7 +17,7 @@ Scanner을 이용하여 다음과 같이 출력되도록 합니다.
 [결과]
 KT : 서은진, 강휘 
 */
-
+ 
 public class method12 {
 
     public static void main(String[] args) {

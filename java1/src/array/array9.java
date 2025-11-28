@@ -20,7 +20,7 @@ public class array9 {
 class array9_box{
 	public Scanner sc= new Scanner(System.in);
 	String menu[] = {"햄버거", "피자", "치킨", "라면", "김밥", "커피" };
-	ArrayList<String> al = new ArrayList<String>(Arrays.asList(menu));
+	ArrayList<String> al = new ArrayList<String>(Arrays.asList(menu)); //클배 만들기 빈공간 = new 뒤부분 asList(menu)
 	
 	public void bbb() {
 		//System.out.println(al);
