@@ -52,11 +52,34 @@ class ex1_box{
 		
 		
 		//2차 클래스에 있는 그룹단위로 반복문을 이용하여 데이터를 검토하는 코드
-		int ff;
-		for(ff=0; ff<this.all.size();ff++) {
-			System.out.println(this.all.get(ff).get(0));
+		boolean found = false;
+
+		for(int i=0; i<all.size(); i++) {
+		    List<String> item = all.get(i); // i번째 상품 리스트
+		    
+		    if(item.get(0).equals(pdnm)) { // 상품명 비교
+		        System.out.println("상품명 : " + item.get(0));
+		        
+		        // 할인 여부에 따라 출력
+		        if(item.get(1).equals("Y") && !item.get(3).isEmpty()) {
+		            System.out.println("상품가격 : " + item.get(2));
+		            System.out.println("할인가격 : " + item.get(3));
+		        } else {
+		            System.out.println("상품가격 : " + item.get(2));
+		        }
+
+		        // 추천수와 수량이 있으면 출력
+		        if(!item.get(4).isEmpty()) System.out.println("추천수 : " + item.get(4));
+		        if(!item.get(5).isEmpty()) System.out.println("수량 : " + item.get(5));
+		        
+		        found = true;
+		        break;
+		    }
 		}
-		
+
+		if(!found) {
+		    System.out.println("해당 상품은 확인되지 않습니다.");
+		}
 	}
 	
 	
