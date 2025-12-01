@@ -75,6 +75,7 @@ public class ex1 {
 	                    System.out.println("할인가격: " + dto.getDcpr());
 	                    System.out.println("추천수: " + dto.getReco());
 	                }
+	                
 	                System.out.println("수량: " + dto.getEa());
 	                found = true;
 	                break;
