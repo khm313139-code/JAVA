@@ -2,6 +2,7 @@ package dto;
 
 import java.util.*;
 //dto 없이 코드 짜는 내용
+//git에 강사님 코드 있음.
 
 public class ex2 {
 
@@ -14,8 +15,13 @@ public class ex2 {
 
 class ex1_box{
 	Scanner sc =null;
-	List<String> al = null; //1차 배열 구성
+	List<String> al = null; //1차 배열 구성 / 이거 링크드도 잡을 수 있으니까 list로 잡아둔 것(인터페이스)
 	ArrayList<List<String>> all = null; //2차 배열 구성
+	
+	/* list를 2차 배열로 잡아두면 linkedlist로 핸들링할 수 있다.
+	ArrayList<Integer> no=null;
+	List<ArrayList<Integer>> all2 =new LinkedList<ArrayList<Integer>>(); 
+	*/
 	
 	String product[][] = {
 			{"솔브리빙 논슬립 내구성 좋은 고급형 옷걸이","Y","37000","30400","17","250"},
@@ -32,12 +38,9 @@ class ex1_box{
 	public ex1_box() { //즉시 실행 코드
 		this.sc = new Scanner(System.in);
 		this.all = new ArrayList<List<String>>(); //2차 빈 배열
-		this.abc();
 		
-	}
-	
-	public void abc() {
-		//원시 배열 형태를 => 1차 배열로 만들고 => 2차 배열에 전달
+		//원시 배열 형태를 => 1차 배열로 만들고 => 2차 배열에 전달 / 이 밑에 코드는 재귀 메소드 실행을 위해서 여기에 삽입해서 돌림
+		//이거를 abc안에 넣어버리면 돌릴때마다 밑에 코드를 도는데 효율적으로 좋지 않다.
 		int f;
 		for(f=0; f<this.product.length; f++) {
 			this.al = new ArrayList<String>(Arrays.asList(product[f])); //하나의 그룹에 하나로 묶어서 넣어버림
@@ -45,11 +48,21 @@ class ex1_box{
 			//System.out.println(al);
 		}
 		
+		this.abc();
+		
+	}
+	
+	public void abc() {
 		//System.out.println(this.all.get(4).get(2)); //2차 클래스에서 해당 그룹에서 데이터를 출력
 		//System.out.println(all);
-		System.out.println("검색할 상품명을 입력하세요: ");
+		System.out.println("검색할 상품명을 입력하세요 (종료:exit): ");
 		String pdnm = this.sc.nextLine(); //nextLine() 이거는 한칸 띄어쓰기 입력까지 받는 역할임 / 스페이스 바를 입력 후 적용된 단어도 포함.
 		
+		if(pdnm.equals("exit")) {
+			System.out.println("프로세스 종료");
+			this.sc.close();
+			System.exit(0);
+		}
 		
 		//2차 클래스에 있는 그룹단위로 반복문을 이용하여 데이터를 검토하는 코드
 		boolean found = false;
@@ -76,12 +89,12 @@ class ex1_box{
 		        break;
 		    }
 		}
-
+		//배열 클래스에 반복문으로 검토 하였을 경우 배열에 동일한 상품이 없을때 아래처럼 뜰 수가 있다.
 		if(!found) {
 		    System.out.println("해당 상품은 확인되지 않습니다.");
 		}
+		this.abc();
 	}
-	
 	
 }
 

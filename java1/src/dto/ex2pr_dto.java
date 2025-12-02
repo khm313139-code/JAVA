@@ -23,6 +23,7 @@ public class ex2pr_dto{
 	public static void main(String[] args){
 		Scanner sc=new Scanner(System.in);
 		ArrayList<ex2_dto> list=new ArrayList<>(); //이거 object로 놓고 해도 되는지 아니면 지금은 string만 다루고 있으니 string만 해야하는지
+		//이거 dto를 아래에서 한번더 생성을 하니 object로 두고 하는게 맞다 but 인터페이스에서는 이렇게 선언하는게 좋다.
 		ex2pr_dto_box box=new ex2pr_dto_box(); //ex2pr_dto_box 이거 변수명은 아무거나 해도 되는지
 		for(int i=0; i<box.product.length; i++) {
 			ex2_dto dto=new ex2_dto(); //dto로 넘겨주기 위한 공간 할당
