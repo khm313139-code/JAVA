@@ -1,5 +1,5 @@
 package dto;
-
+//controller
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -25,9 +25,53 @@ http://mekeyace.kbsn.or.kr/excp.txt
 */
 
 public class excp7 {
-	
-	int ar[];
+	// 강사님 코드
+	//int ar[]; - 내 코드에서 사용
 	public static void main(String[] args) {
+		excp7_box eb = new excp7_box(); //new excp7_box(); 메소드가 2개니 얘를 아예 필드에 둬버림
+		
+		Scanner sc = new Scanner(System.in);
+		ArrayList<Integer> data = new ArrayList<Integer>();
+	
+		try {
+			for(;;) {
+				
+				if(data.size()<6){ //최대 클래스 배열에 값이 6개 까지 반복 조건
+				System.out.println("숫자를 입력해 주세요 : ");
+				String userkey = sc.next();
+				Integer ckno = eb.user_check(userkey); //해당 메소드로 전달
+			
+				if(ckno!=null) {
+					data.add(ckno);
+				
+					}
+				}
+				else {
+					break;
+				}					
+			}
+		}
+		
+		catch (Exception e) {
+			System.out.println("해당 컨트롤로 코드 문제 발생!!");
+		}
+		
+		finally { //얘는 무조건 실행됨.
+			sc.close();
+			
+		}
+		
+		eb.result(data); //배열을 던질거다. result로 
+		//excp7_box.java에 있는 result 메소드로 클래스 배열값을 전달
+		
+		
+		
+		
+		
+		
+		
+		
+		/*
 		Scanner sc=new Scanner(System.in);
 		ArrayList<Integer> ar = new ArrayList<>();
 		
@@ -49,8 +93,10 @@ public class excp7 {
 
 		excp7_box eb=new excp7_box();
 		eb.input(ar);
-		
+		*/
 	}
 
 }
+
+
 
