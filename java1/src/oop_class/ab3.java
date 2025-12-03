@@ -28,6 +28,15 @@ public class ab3 extends abs_3{
 		
 
 	}
+	
+	@Override
+	public void result() throws Exception {
+		// TODO Auto-generated method stub
+		
+	}
+	
+	
+	
 	@Override
 	public void userin() {
 		this.arr = new ArrayList<>();
@@ -62,9 +71,6 @@ public class ab3 extends abs_3{
 	
 	
 	public ab3() {
-		
-		
-	
 		System.out.println(arr);
 	}
 }
