@@ -1,22 +1,23 @@
 package array;
-
-import java.util.ArrayList;
-import java.util.Arrays;
+//
+//import java.util.ArrayList;
+//import java.util.Arrays;
 
 
 
 //2차 클래스 배열 => 1차 클래스 배열 => 데이터를 추가하는 형태
+
 //public class array10 {
-////
-//public static void main(String[] args) {
-//   Integer a[][] = {
-//           {10,20,30}, //0번 그룹
-//           {100,200,300} //1번 그룹
 //
-//   };
-
-
-
+//	public static void main(String[] args) {
+//		   Integer a[][] = {
+//		           {10,20,30}, //0번 그룹
+//		           {100,200,300} //1번 그룹
+//		
+//		 };
+//	}
+//
+//}
 
 		/* 책에서 나온 배열 for문
       // 2차 클래스
