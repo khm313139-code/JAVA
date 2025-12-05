@@ -80,13 +80,7 @@ class ex8_box extends ex_ab {
 		}
 	}
 		System.out.println("프로그램 종료");
-	
-	
-	
-	
-	
-	
-	
-}
+
+	}
 }
 
