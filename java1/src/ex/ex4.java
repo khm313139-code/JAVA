@@ -34,52 +34,54 @@ public class ex4 {
 
 class ex4_box {
 	public ex4_box() { //즉시 실행
-		this.data();
-	}
-
-	
+//		this.data();
+//	}
+//
+//	
         String data[][] = {
             {"대한민국","일본","중국","베트남","태국"},
             {"40","35","70","55","32"}
         };
-        
-        //강사님 코드
-        
-        public void data() {
-        	
-        	
-        	//dto 버전
+//        
+//        //강사님 코드
+//        
+//        public void data() {
+//        	
+//        	
+//        	//dto 버전
         	ArrayList<ArrayList<String>> all = new ArrayList<ArrayList<String>>();
-        	int w = 0;
-        	while(w<data[0].length) {
-        		ArrayList<String> result = this.al(data[0][w], data[1][w]); //return 받을때는 new 쓰면 안됨.
-        		all.add(result); //return 받은 1차 클래스 배열값을 2차 클래스 배열로 삽입
-        		w++;
-        	}
-        	System.out.println(all);
-        }
-        	
-        	
-        public ArrayList<String> al(String k, String n){ //1차 클래스 배열이 제작되는 메소드
-        	ArrayList<String> a = new ArrayList<String>();
-        	a.add(k);
-        	a.add(n);
-        	return a;
-
+//        	int w = 0;
+//        	while(w<data[0].length) {
+//        		ArrayList<String> result = this.al(data[0][w], data[1][w]); //return 받을때는 new 쓰면 안됨.
+//        		all.add(result); //return 받은 1차 클래스 배열값을 2차 클래스 배열로 삽입
+//        		w++;
+//        	}
+//        	
+//        	System.out.println(all);
+//        }
+//        	
+//        	
+//        public ArrayList<String> al(String k, String n){ //1차 클래스 배열이 제작되는 메소드
+//        	ArrayList<String> a = new ArrayList<String>();
+//        	a.add(k);
+//        	a.add(n);
+//       
+//        	return a;
+//        	
         	
         	
 
         	
 //        	//1.더블 반복문 안쓰고 돌리기
-//        	int w=0;
-//        	while(w<data[0].length) { //5바퀴
-//        		ArrayList<String> a = new ArrayList<String>();
-//        		a.add(data[0][w]);//[그룹번호][데이터번호]
-//        		a.add(data[1][w]);
-//        		all.add(a);
-//        		w++;
-//        	}
-//        	System.out.println(all);
+        	int w=0;
+        	while(w<data[0].length) { //5바퀴
+        		ArrayList<String> a = new ArrayList<String>();
+        		a.add(data[0][w]);//[그룹번호][데이터번호]
+        		a.add(data[1][w]);
+        		all.add(a);
+        		w++;
+        	}
+        	System.out.println(all);
 
 
 
