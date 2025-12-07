@@ -39,7 +39,7 @@ public class ex5 {
 //            if (a.equals(usernm)) {
 //                toRemove.add(a);
 //            }
-//        }
+//        } h
 //
 //        // 저장한 요소 제거
 //        for (String r : toRemove) {
